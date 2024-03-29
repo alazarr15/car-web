@@ -1,34 +1,117 @@
-import React from "react";
+import './contact.css'
+import {useRef} from 'react'
+import emailjs from "@emailjs/browser"
+import { faAddressCard, faPhone} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from "@fortawesome/react-fontawesome"
+import {
+  faTelegram,
+  faFacebook,
+  faWhatsapp,
+} from '@fortawesome/free-brands-svg-icons'
 
-const Contact = () => {
-  return (
-    <>
-      <span id="contact"></span>
-      <div data-aos="zoom-in" className="dark:bg-black dark:text-white py-14">
-        <div className="container ">
-          <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 bg-gray-800 py-8 px-6">
-            <div className="col-span-2 space-y-3">
-              <h1 className="text-4xl sm:text-5xl font-bold text-white">
-                Let's collaborate on your upcoming car rental venture
-              </h1>
-              <p className="text-gray-400">
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Exercitationem necessitatibus quasi et vel,{" "}
-              </p>
-            </div>
-            <div className="sm:grid sm:place-items-center">
-              <a
-                href="#"
-                className="inline-block font-semibold py-2 px-6 bg-primary text-white hover:bg-primary/80 duration-200 tracking-widest uppercase "
-              >
-                Contact
-              </a>
-            </div>
+function Contact({theme}) {
+  const telegramUserName="@Mikyyetklyelij"
+  const linkdinUserName='https://www.linkedin.com/in/mikyas-negash-01b400263'
+  const phoneNumber='0902464535'
+  const handleDial =()=>{
+    window.location.href=`tel:${phoneNumber}`
+  }
+  const telegramLink=`https://t.me/${telegramUserName}`;
+
+
+    const letters=[`S`,`A`,`Y `,`_`,`H`,`Y` ];
+    const form = useRef();
+
+    const sendEmail = (e) => {
+      e.preventDefault();
+     
+
+  
+      emailjs
+        .sendForm('service_uk7hzdl', 'template_0fnzi45', form.current, {
+          publicKey: 're8UOJpBf_mKVPA23',
+        })
+        .then(
+          () => {
+            alert(`SUCCESSFULLY SENT!`);
+            form.current.reset();
+          },
+          (error) => {
+            alert('FAILED...', error.text);
+          },
+        );
+    };
+    return (
+    <div id='contact' className='containerC  flex justify-between contact-page'>
+         
+        <div className="text-zone">
+            <h1 className='h1' style={{ color: theme === 'dark' ? 'white' : 'black' }}>
+                {letters.map((i,index)=>{
+             return  <span  key={index} className="father">{i}</span>
+               })}
+            </h1>
+            <p style={{ color: theme === 'dark' ? 'white' : 'black' }}>
+         IF YOU WANT TO CONTACT US. 
+         USE THE FOLOWING ADDRESESS
+            </p>
+           
+            <div className="contact-form">
+          <form ref={form} onSubmit={sendEmail}  className='flex-2'>
+            <ul>
+               <li className="half" style={{ color: theme === 'dark' ? 'white' : 'black' }}>
+                <input type="text"  className="text" name="from_name" id="sendername" placeholder="Name" />
+               </li>
+               <li className="half" style={{ color: theme === 'dark' ? 'white' : 'black' }}>
+              <input type="text" className="text" name="from_email" id="replyto"  placeholder="Email"
+              required />
+               </li>
+               <li>
+               <textarea name="message" placeholder='Message' style={{ color: theme === 'dark' ? 'white' : 'black' }}/>
+      <input type="submit" value="Send"  className='flat '/>
+               </li>
+                   
+            </ul>
+          </form>
+         
+         
+         
+         
+         
+          <section className='additional flex-1 ' style={{ color: theme === 'dark' ? 'white' : 'black' }}>
+       
+       
+        <div className="call-us">
+        <a href={`tel:${phoneNumber}`} className='phone' onClick={handleDial}>
+      <FontAwesomeIcon className='anchor' style={{ color: theme === 'dark' ? 'white' : 'black' }} icon={faPhone} color='#4d4d4e' /> <strong>PHONES<br></br>
+      <span> +2519024635<br></br>+2519876543 </span> </strong>
+          </a>                     
+           <a  className='phone'>
+      <FontAwesomeIcon className='anchor' style={{ color: theme === 'dark' ? 'white' : 'black' }} icon={faAddressCard} color='#4d4d4e' /> <strong>ADDRESS<br></br>
+      <span>CHURCHIL SRT 234 ,UI LI<br></br> BUILDING 2ND   </span></strong>
+          </a> 
+        </div>
+      
+      
+    
+      
+        <div className="social-link">
+        <a href={telegramLink} className='social' >
+      <FontAwesomeIcon className='linkt' icon={faTelegram} color='#' /> 
+          </a>           
+          <a href={linkdinUserName} className='social' >
+      <FontAwesomeIcon className='linkf' icon={faFacebook} color='#' /> 
+          </a>            
+          <a href={linkdinUserName} className='social' >
+      <FontAwesomeIcon className='linkv' icon={faWhatsapp} color='#' />
+          </a> 
+        </div>
+        
+          </section>
           </div>
         </div>
-      </div>
-    </>
-  );
-};
+      
+    </div>
+  )
+}
 
-export default Contact;
+export default Contact

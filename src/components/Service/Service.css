@@ -1,0 +1,373 @@
+@import 'animate.css';
+
+:root {
+
+    /**
+     * colors
+     */
+    
+    --pale-purple-pantone: hsl(262, 63%, 92%);
+    --medium-sea-green: hsl(152, 63%, 43%);
+    --lavender-blush: hsl(336, 35%, 92%);
+    --carolina-blue: hsl(204, 91%, 53%);
+    --columbia-blue: hsl(204, 92%, 90%);
+    --alice-blue-1: hsl(216, 38%, 95%);
+    --alice-blue-2: hsl(216, 75%, 97%);
+    --alice-blue-3: hsl(216, 38%, 95%);
+    --alice-blue-4: hsl(217, 33%, 92%);
+    --independence: hsl(219, 21%, 39%);
+    --deep-cerise: hsl(329, 63%, 52%);
+    --eerie-black: hsl(210, 11%, 15%);
+    --space-cadet: hsl(240, 22%, 25%);
+    --blue-jeans: hsl(204, 80%, 63%);
+    --slate-blue: hsl(262, 60%, 57%);
+    --beau-blue: hsl(208, 86%, 92%);
+    --honey-dew: hsl(152, 48%, 89%);
+    --mimi-pink: hsl(329, 63%, 90%);
+    --red-salsa: hsl(0, 79%, 63%);
+    --sapphire: hsl(211, 100%, 35%);
+    --manatee: hsl(219, 14%, 60%);
+    --white: hsl(0, 0%, 100%);
+    --gradient: linear-gradient(to top, var(--alice-blue-2), var(--alice-blue-3));
+  
+    /**
+     * typography
+     */
+
+    --ff-nunito: 'Nunito', sans-serif;
+    --ff-open-sans: 'Open Sans', sans-serif;
+  
+    --fs-1: 2.125rem;
+    --fs-2: 1.875rem;
+    --fs-3: 1.5rem;
+    --fs-4: 1.375rem;
+    --fs-5: 1.125rem;
+    --fs-6: 0.875rem;
+    --fs-7: 0.625rem;
+  
+    --fw-400: 400;
+    --fw-600: 600;
+  
+    /**
+     * transition
+     */
+  
+    --transition: 0.5s ease;
+  
+    /**
+     * spacing
+     */
+  
+    --section-padding: 50px;
+  
+    /**
+     * radius
+     */
+  
+    --radius-10: 10px;
+    --radius-14: 14px;
+    --radius-18: 18px;
+  
+    /**
+     * shadow
+     */
+  
+    --shadow-1: 3px 3px 9px hsla(240, 14%, 69%, 0.2);
+    --shadow-2: 3px 3px 9px hsla(204, 92%, 59%, 0.3);
+  
+  }
+  
+  
+  
+  
+  
+  /*-----------------------------------*\
+    #RESET
+  \*-----------------------------------*/
+  
+  *, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  li { list-style: none; }
+  
+  a { text-decoration: none; }
+  
+  a,
+  img,
+  span,
+  label,
+  input,
+  button,
+  ion-icon { display: block; }
+  
+  button,
+  input {
+    background: none;
+    border: none;
+    font: inherit;
+  }
+  
+  button { cursor: pointer; }
+  
+  input { width: 100%; }
+  
+  ion-icon { pointer-events: none; }
+  
+  html {
+    font-family: var(--ff-open-sans);
+    color: var(--eerie-black);
+    font-size: 1rem;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    width:100%;
+  }
+  
+  body {
+    background: var(--alice-blue-1);
+    overflow-x: hidden;
+  }
+  
+  /*-----------------------------------*\
+    #REUSED STYLE
+  \*-----------------------------------*/
+ 
+  .container { padding-inline: 15px; }
+  
+  button, a { transition: var(--transition); }
+  
+  .btn {
+    position: relative;
+    background: var(--background, var(--carolina-blue));
+    color: var(--color, var(--white));
+    min-width: var(--width, 40px);
+    min-height: var(--height, 40px);
+    padding: 5px;
+    display: grid;
+    place-items: center;
+    border-radius: var(--radius-14);
+    font-family: var(--ff-nunito);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-600);
+    overflow: hidden;
+  }
+  
+  .btn ion-icon {
+    font-size: 22px;
+    --ionicon-stroke-width: 40px;
+  }
+  
+  .btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to right, hsla(0, 0%, 100%, 0.4), transparent);
+    opacity: 0;
+    pointer-events: none;
+    transition: var(--transition);
+  }
+  
+  .btn:is(:hover, :focus) { box-shadow: var(--shadow-2); }
+  
+  .btn:is(:hover, :focus)::before { opacity: 1; }
+  
+  .section { padding-block: var(--section-padding);  }
+  
+  .h1,
+  .h2,
+  .h3 {
+    color: var(--space-cadet);
+    font-family: var(--ff-nunito);
+    line-height: 1.4;
+  }
+  
+  .h1 {
+    font-size: var(--fs-1);
+    text-transform: uppercase;
+  }
+  
+  .h2,
+  .h3 { font-weight: var(--fw-400); }
+  
+  .h2 { font-size: var( --fs-2); }
+  
+  .h3 { font-size: var(--fs-4); }
+  
+  .w-100 { width: 100%; }
+  
+ 
+  
+  .featured-car .title-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    flex-direction:column;
+    align-items: center;
+    gap: 10px 15px;
+    margin-bottom: 30px;
+    h2{
+      font-size:50px;
+      color:white;
+      @media (max-width:500px){
+        font-size:30px;
+      }
+    }
+  }
+  .title-wrapper .filtering{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px 15px;
+  }
+  .filtering span{
+    padding:5px 5px;
+    cursor:pointer;
+    border-radius:10%;
+    border:2px solid ;
+    font-size:20px;
+}
+.filtering  .active{
+  color: var(--carolina-blue);
+  border:2px solid  var(--carolina-blue) ; 
+}
+
+  .featured-car-list {
+    flex-wrap:wrap;
+    grid-row-gap:30px;
+   
+   
+  }
+  
+  .featured-car-list{
+    display: flex;
+    justify-content:space-between;
+    align-items:center;
+    @media (min-width:710px){
+      justify-content:space-around;
+     }
+  }
+  .featured-car-list li{
+   width:50%;   
+   @media (min-width:710px){
+    width:30%;   
+   }
+   
+  }
+ 
+  .featured-car-card {
+    background: var(--gradient);
+    border: 1px solid var(--white);
+    border-radius: var(--radius-18);
+    padding: 10px;
+    box-shadow: var(--shadow-1);
+  
+  }
+  
+  .featured-car-card .card-banner {
+    background: hsla(0, 0%, 0%, 0.2);
+    width:100%;
+    border-radius: var(--radius-18);
+    overflow: hidden;
+  }
+  
+  .featured-car-card .card-banner > img {
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .featured-car-card .card-content { padding: 20px 10px 10px; }
+  
+  .featured-car-card .card-title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    margin-bottom: 15px;
+
+  }
+ 
+ 
+  .featured-car-card .card-title { width: calc(100% - 60px); }
+  
+  .featured-car-card .card-title > a {
+    color: inherit;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  
+  
+  .featured-car-card .year {
+    font-family: var(--ff-nunito);
+    font-size: var(--fs-6);
+    font-weight: var(--fw-600);
+    padding: 3px 12px;
+    border: 2px dashed hsla(204, 91%, 53%, 0.4);
+    border-radius: var(--radius-14);
+    color:black;
+  }
+  
+  .featured-car-card .card-list {
+    display: flex;
+    justify-content:space-between;
+    flex-wrap:wrap;
+    gap: 15px;
+    padding-bottom: 15px;
+    border-bottom: 1px solid hsla(0, 0%, 0%, 0.1);
+    margin-bottom: 15px;
+  }
+  
+  .featured-car-card .card-list-item {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    width:45%;
+  }
+  
+  .featured-car-card .card-list-item p{
+    font-size: 20px;
+    color: var(--carolina-blue);
+    --ionicon-stroke-width: 38px;
+  }
+  
+  .featured-car-card .card-item-text {
+    color: var(--independence);
+    font-size: var(--fs-6);
+  }
+  
+  .featured-car-card .card-price-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .featured-car-card .card-price {
+    font-family: var(--ff-nunito);
+    font-size: var(--fs-6);
+    color: var(--space-cadet);
+  }
+  
+  .featured-car-card .card-price strong {
+    font-size: var(--fs-3);
+    font-weight: var(--fw-400);
+  }
+  
+  .featured-car-card .btn {
+    --height: 36px;
+    min-width: 100%;
+  }
+  
+   @media(max-width:460px){
+      .featured-car-list li{
+         width:100%; 
+      }
+    }
+    
+   
+  
