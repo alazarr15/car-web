@@ -258,8 +258,7 @@
   }
  
   .featured-car-card {
-    background: var(--gradient);
-    border: 1px solid var(--white);
+    border: 1px solid gray;
     border-radius: var(--radius-18);
     padding: 10px;
     box-shadow: var(--shadow-1);
@@ -308,7 +307,6 @@
     padding: 3px 12px;
     border: 2px dashed hsla(204, 91%, 53%, 0.4);
     border-radius: var(--radius-14);
-    color:black;
   }
   
   .featured-car-card .card-list {
@@ -330,7 +328,7 @@
   
   .featured-car-card .card-list-item p{
     font-size: 20px;
-    color: var(--carolina-blue);
+    color:yellow;
     --ionicon-stroke-width: 38px;
   }
   
@@ -361,6 +359,7 @@
   .featured-car-card .btn {
     --height: 36px;
     min-width: 100%;
+    background-color: rgb(254, 254, 6);
   }
   
    @media(max-width:460px){

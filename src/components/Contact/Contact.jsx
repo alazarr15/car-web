@@ -16,7 +16,7 @@ const Contact = ({ theme }) => {
 
   const telegramLink = `https://t.me/${telegramUserName}`;
 
-  const letters = ['S', 'A', 'Y', ' ', 'H', 'Y'];
+  const letters = ['C', 'o', 'n', 't ', 'a', 'c','t','','U','s'];
   const form = useRef();
 
   const sendEmail = (e) => {
@@ -40,7 +40,7 @@ const Contact = ({ theme }) => {
   return (
     <div id="contact" className="containerC flex justify-between contact-page">
       <div className="text-zone">
-        <h1 className="h1 text-white">
+        <h1 className="h1 text-white" style={{ color: theme === 'dark' ? 'white' : 'black' }}>
           {letters.map((i, index) => {
             return (
               <span key={index} className="father">
@@ -49,7 +49,7 @@ const Contact = ({ theme }) => {
             );
           })}
         </h1>
-        <p className="text-white">
+        <p className="text-white" style={{ color: theme === 'dark' ? 'white' : 'black' }}>
           IF YOU WANT TO CONTACT US. USE THE FOLLOWING ADDRESSES
         </p>
 

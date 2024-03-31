@@ -8,15 +8,16 @@
 .containerC {
     width: 100%;
     will-change: contents;
-    height: 100vh;
+    height: 90vh;
     opacity:0;
     transform-style: preserve-3d;
     animation: fadeIn 1.5s forwards;
     animation-delay: 1.7s;
-    margin-bottom: 100px;
+    margin-bottom:0 ;
     border-top:1px solid black;
+    margin-top: 30px;
     @media(max-width:567px){
-      margin-bottom:400px;
+      margin-bottom:200px;
     }
   }
   .contact-page{
@@ -34,30 +35,33 @@
           width: 90%;
          }
         h1{
-            font-size:53px;
-            font-family:'Coolvetica';
+            font-size:33px;
+            font-family:'Times New Roman', Times, serif;
             font-weight: 400;
             position: relative;
             display:flex;
-            margin:40px 40px;
-
+            margin:40px 80px;
+            
+            .father{
+              padding-left: 30px;
+            }
+  
             .father:hover{
                 cursor: pointer;
-                color: var(--carolina-blue);
+                color:yellow;
                 animation: fadeIn 1s forwards ;
               
               }
         
         }
         p{
-            font-size:13px;
+            font-size:15px;
             font-family:sans-serif;
             font-weight: 100;
             min-width:fit-content;
             animation:pulse 1.4s;
             line-height:20px;
-            margin:30px 40px;
-            color:black;
+            margin:30px 100px;
            
         }
     }
