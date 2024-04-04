@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { BiSolidSun, BiSolidMoon } from "react-icons/bi";
 import { HiMenuAlt3, HiMenuAlt1 } from "react-icons/hi";
 import ResponsiveMenu from "./ResponsiveMenu";
+export {HiMenuAlt1};
 
 export const Navlinks = [
   {
@@ -32,7 +33,8 @@ const Navbar = ({ theme, setTheme }) => {
     setShowMenu(!showMenu);
   };
   return (
-    <div
+  <>
+   <div
       className="relative z-10 shadow-md w-full dark:bg-black dark:text-white duration-300
     "
     >
@@ -70,7 +72,7 @@ const Navbar = ({ theme, setTheme }) => {
             </ul>
           </nav>
           {/* Mobile view  */}
-          <div className="flex items-center gap-4 md:hidden ">
+          <div className="flex items-center gap-4 md:hidden">
             {/* dark  mode */}
             {theme === "dark" ? (
               <BiSolidSun
@@ -87,8 +89,9 @@ const Navbar = ({ theme, setTheme }) => {
             {showMenu ? (
               <HiMenuAlt1
                 onClick={toggleMenu}
-                className=" cursor-pointer transition-all"
+                className={`cursor-pointer transition-all ${showMenu ? "opacity-0": ""} `}
                 size={30}
+                
               />
             ) : (
               <HiMenuAlt3
@@ -97,12 +100,18 @@ const Navbar = ({ theme, setTheme }) => {
                 size={30}
               />
             )}
+
+    
           </div>
         </div>
       </div>
-      <ResponsiveMenu showMenu={showMenu} />
+
+      <ResponsiveMenu showMenu={showMenu} setShowMenu={setShowMenu} />
+      
     </div>
-  );
+  
+  </>
+   );
 };
 
 export default Navbar;

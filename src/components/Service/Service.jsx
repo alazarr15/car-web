@@ -1,5 +1,5 @@
 import { useState,useEffect } from 'react'
-import './Service.css'
+import './Service.scss'
 import { MdElectricBolt } from "react-icons/md";
 import { IoIosSpeedometer } from "react-icons/io";
 import { SiAutomattic } from "react-icons/si";
@@ -58,15 +58,15 @@ function Service({theme}) {
                     return item.vehicle === "toyota"
                   }
               
-          
+           
           }).map((item,index)=>(
             
             <li  key={index}>
               <div className="featured-car-card" style={{ color: theme === 'dark' ? 'white' : 'black' }}>
 
-                <figure className="card-banner">
+                <figure className="card-banner ">
                   <img src={item.img} alt="Toyota RAV4 2021" loading="lazy" width="440" height="300"
-                    className="w-100" />
+                    className="w-full" />
                 </figure>
 
                 <div className="card-content">
@@ -93,12 +93,12 @@ function Service({theme}) {
 
                     <li className="card-list-item">
                       <p><IoIosSpeedometer /></p> 
-                      <span className="card-item-text" style={{ color: theme === 'dark' ? 'white' : 'black' }}>{item.km}km / {item.liter}-lit</span>
+                      <span className="card-item-text" style={{ color: theme === 'dark' ? 'white' : 'black' }}>{item.range}km</span>
                     </li>
 
                     <li className="card-list-item">
                     <p> <SiAutomattic /></p>
-                   <span className="card-item-text" style={{ color: theme === 'dark' ? 'white' : 'black' }}>{item.drived}</span>
+                   <span className="card-item-text" style={{ color: theme === 'dark' ? 'white' : 'black' }}>{item.transmission}</span>
                     </li>
 
                   </ul>
@@ -106,7 +106,7 @@ function Service({theme}) {
                   <div className="card-price-wrapper">
 
                     <p className="card-price" style={{ color: theme === 'dark' ? 'white' : 'black' }}>
-                      <strong>${item.price}</strong> / month
+                      <strong>${item.price}</strong>
                     </p>
                     <button className="btn" >Call now</button>
 
@@ -140,79 +140,80 @@ export default Service
 
 const data=[
   {
-      img:"images/car-2.jpg",
-      title:"Toyota RAV4",
-      date:"2021",
-      sites:"4",
-      km:"6.1",
-      liter:"1",
-      designe:"Hybrid",
-      drived:"Automatic",
-      price:"450",
+      img:"images/id6-crozz.png",
+      title:"id.6 Crozz Pro",
+      date:"2023",
+      sites:"6",
+      range:"600",
+      battery:"84.8kwh",
+      designe:"Electric",
+      transmission:"Automatic",
+      price:"5.6 million",
       vehicle:"volse"
      },
      {
-      img:"images/car-3.jpg",
-      title:"Toyota RAV4",
-      date:"2021",
-      sites:"4",
-      km:"6.1",
-      liter:"1",
-      designe:"Hybrid",
-      drived:"Automatic",
-      price:"450",
-      vehicle:"mercedes",
+      img:"images/eq.png",
+      title:"Q8 e-tron sportback", 
+      date:"2023",
+      sites:"5",
+      range:"560",
+      battery:"83.4kwh",
+      designe:"Electric",
+      transmission:"Automatic",
+      price:"11 million",
+      vehicle:"Audi",
 
      },
      {
-      img:"images/car-4.jpg",
-      title:"Toyota RAV4",
-      date:"2021",
-      sites:"4",
-      km:"6.1",
-      liter:"1",
-      designe:"Hybrid",
-      drived:"Automatic",
-      price:"450",
-      vehicle:"mercedes",
+      img:"images/eq.png",
+      title:"neta v",
+      date:"2023",
+      sites:"5",
+      range:"400",
+      battery:"58kwh",
+      designe:"Electric",
+      transmission:"Automatic",
+      price:"3 million",
+      vehicle:"Hozon",
 
      },
      {
-      img:"images/car-6.jpg",
-      title:"Toyota RAV4",
-      date:"2022",
-      sites:"4",
-      km:"6.1",
-      liter:"1",
-      designe:"Hybrid",
-      drived:"Automatic",
-      price:"450",
-      vehicle:"volse"
-     },
-
-     {
-      img:"images/car-4.jpg",
-      title:"Toyota RAV4",
-      date:"2021",
-      sites:"4",
-      km:"6.1",
-      liter:"1",
-      designe:"Hybrid",
-      drived:"Automatic",
-      price:"450",
-      vehicle:"toyota",
-
-     },
-     {
-      img:"images/car-6.jpg",
-      title:"Toyota RAV4",
-      date:"2021",
-      sites:"4",
-      km:"6.1",
-      liter:"1",
-      designe:"Hybrid",
-      drived:"Automatic",
-      price:"450",
+      img:"images/toyota-bz4x_1.png",
+      title:"bz4x",
+      date:"2023",
+      sites:"5",
+      range:"500km",
+      battery:"66.7kwh",
+      designe:"Electric",
+      transmission:"Automatic",
+      price:"5-5.3 million",
       vehicle:"toyota"
+     },
+
+     {
+      img:"images/toyota-bz4x_1.png",
+      title:"id.4 Crozz Pro",
+      date:"2023",
+      sites:"5",
+      range:"550km",
+      battery:"84.8kwh",
+      designe:"Electric",
+      transmission:"Automatic",
+      price:"5 million",
+      vehicle:"volse"
+
+     },
+     {
+      img:"images/toyota-bz4x_1.png",
+      title:"Eqc 400 4matic",
+      date:"2022",
+      sites:"5",
+      range:"370km",
+      battery:"85kwh",
+      designe:"Electric",
+      transmission:"Automatic",
+      price:"11.9 million",
+      vehicle:"mercedes"
+
      }
 ]

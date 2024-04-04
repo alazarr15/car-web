@@ -1,4 +1,4 @@
-import "./Contact.css"
+import "./Contact.scss"
 import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { faAddressCard, faPhone } from '@fortawesome/free-solid-svg-icons';

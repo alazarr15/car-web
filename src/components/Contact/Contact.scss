@@ -16,8 +16,9 @@
     margin-bottom:0 ;
     border-top:1px solid black;
     margin-top: 30px;
+    margin-bottom:300px ;
     @media(max-width:567px){
-      margin-bottom:200px;
+      margin-bottom:400px;
     }
   }
   .contact-page{
@@ -44,11 +45,15 @@
             
             .father{
               padding-left: 30px;
+              @media(max-width:567px){
+                font-size: 22px;
+                padding-left: 3px;
+               }
             }
   
             .father:hover{
                 cursor: pointer;
-                color:yellow;
+                color:rgb(255 199 39) ;
                 animation: fadeIn 1s forwards ;
               
               }
@@ -62,7 +67,10 @@
             animation:pulse 1.4s;
             line-height:20px;
             margin:30px 100px;
-           
+            @media(max-width:567px){
+              font-size: 12px;
+              margin:25px;
+             }
         }
     }
     .contact-form {
@@ -99,7 +107,7 @@
             }
           .anchor{
             padding:3px;
-            background: var(--background, var(--carolina-blue));
+            background:rgb(255 199 39);
    
             }
             strong{
@@ -168,7 +176,7 @@
             }
             .flat {
               color: black;
-              background: var(--background, var(--carolina-blue));
+              background: rgb(255 199 39);
               font-size: 21px;
               letter-spacing: 3px;
               text-decoration: none;
@@ -211,14 +219,14 @@
             color: black;
             padding: 0 20px;
             box-sizing: border-box;
-            border-bottom:2px solid teal;
+            border-bottom:2px solid rgb(255 199 39);
   
           }
         
           textarea {
             width: 100%;
             border:none;
-            border-bottom:2px solid teal;
+            border-bottom:2px solid rgb(255 199 39);
             font-size: 16px;
             padding: 20px 20px;
             margin:0px;
