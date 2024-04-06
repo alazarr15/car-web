@@ -2,62 +2,61 @@ import React from "react";
 import {
   FaFacebook,
   FaInstagram,
-  FaLinkedin,
   FaLocationArrow,
   FaMobileAlt,
+  FaTelegram,
 } from "react-icons/fa";
 
 const FooterLinks = [
   {
-    title: "Home",
+    title: "Telegram",
     link: "/#",
   },
   {
-    title: "About",
+    title: "Facebook",
     link: "/#about",
   },
   {
-    title: "Contact",
+    title: "Instagram",
     link: "/#contact",
   },
   {
-    title: "Blog",
+    title: "Tiktok",
     link: "/#blog",
   },
 ];
 const Footer = () => {
   return (
-    <div className="bg-gray-100 dark:bg-dark mt-14 rounded-t-3xl">
+    <div className="bg-gray-100 dark:bg-dark mt-8 rounded-t-3xl">
       <section className="container">
-        <div className=" grid md:grid-cols-3 py-5">
+        <div className=" grid md:grid-cols-3 py-5 ml-20 ">
           {/* company Details */}
           <div className=" py-8 px-4 ">
             <h1 className="sm:text-3xl text-xl font-bold sm:text-left text-justify mb-3 flex items-center gap-3 font-serif">
-              Car Rental
+              Moges Motors
             </h1>
             <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur. Lorem ipsum dolor sit amet
-              consectetur adipisicing elit. Possimus, voluptate.{" "}
+            Thriving marketplace for buying, selling, and exploring automobiles worldwide.{" "}
             </p>
             <br />
             <div className="flex items-center gap-3">
               <FaLocationArrow />
-              <p>Noida, Uttar Pradesh</p>
+              <p>Bole,Atlas</p>
             </div>
             <div className="flex items-center gap-3 mt-3">
               <FaMobileAlt />
-              <p>+91 123456789</p>
+              <p>+251909262626</p>
             </div>
             {/* Social Handle */}
             <div className="flex items-center gap-3 mt-6">
-              <a href="#">
-                <FaInstagram className="text-3xl hover:text-primary duration-300" />
+              <a href="https://t.me/mogesmotor">
+                <FaTelegram className="text-3xl hover:text-primary duration-300" />
               </a>
-              <a href="#">
+              <a href="https://www.facebook.com/mogesmotors/">
                 <FaFacebook className="text-3xl hover:text-primary duration-300" />
               </a>
-              <a href="#">
-                <FaLinkedin className="text-3xl hover:text-primary duration-300" />
+              <a href="https://www.instagram.com/moges_motors?igsh=Z2FkMThyMHRhYTlv" >
+                <FaInstagram className="text-3xl hover:text-primary duration-300" />
               </a>
             </div>
           </div>

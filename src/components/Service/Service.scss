@@ -197,7 +197,10 @@
   
   .w-100 { width: 100%; }
   
- 
+ .featured-car{
+  margin-top: 100px;
+  margin-bottom: 200px;
+ }
   
   .featured-car .title-wrapper {
     display: flex;
@@ -230,8 +233,8 @@
     font-size:20px;
 }
 .filtering  .active{
-  color: var(--carolina-blue);
-  border:2px solid  var(--carolina-blue) ; 
+  color:rgb(255 199 39);
+  border:2px solid  rgb(255 199 39); 
 }
 
   .featured-car-list {

@@ -10,25 +10,25 @@ const skillsData = [
       <FaCameraRetro className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Unbeatable prices, vast selection, expert guidance – your car market destination.",
     aosDelay: "0",
   },
   {
-    name: "Fast and Safe",
+    name: "Quality and Safe",
     icon: (
       <GiNotebook className="text-5xl text-primary group-hover:text-black duration-300" />
     ),
     link: "#",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Ensuring a secure and reliable marketplace with top-notch quality standards",
     aosDelay: "500",
   },
   {
-    name: "Experience Drivers",
+    name: "Market experties",
     icon: (
       <SlNote className="text-5xl text-primary group-hover:text-black duration-500" />
     ),
     link: "#",
-    description: "Lorem ipsum dolor sit amet consectetur, adipisicing elit.",
+    description: "Expertise in the car market, driving exceptional experiences for all.",
     aosDelay: "1000",
   },
 ];
@@ -36,7 +36,7 @@ const Services = () => {
   return (
     <>
       <span id="about"></span>
-      <div className="dark:bg-black dark:text-white py-14 sm:min-h-[600px] sm:grid sm:place-items-center">
+      <div className="dark:bg-black bg-slate-100 dark:text-white py-14 sm:min-h-[600px] sm:grid sm:place-items-center mt-10">
         <div className="container">
           <div className="pb-12">
             <h1

@@ -108,7 +108,10 @@ function Service({theme}) {
                     <p className="card-price" style={{ color: theme === 'dark' ? 'white' : 'black' }}>
                       <strong>${item.price}</strong>
                     </p>
-                    <button className="btn" >Call now</button>
+                    
+                    <button className="btn" >
+                      <a href="tel:+251930534417">Call now</a>
+                      </button>
 
                   </div>
 

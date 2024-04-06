@@ -3,7 +3,8 @@ import React, { useRef } from 'react';
 import emailjs from 'emailjs-com';
 import { faAddressCard, faPhone } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faTelegram, faFacebook, faWhatsapp } from '@fortawesome/free-brands-svg-icons';
+import { faTelegram, faFacebook } from '@fortawesome/free-brands-svg-icons';
+import {FaInstagram} from "react-icons/fa";
 
 const Contact = ({ theme }) => {
   const telegramUserName = '@Mikyyetklyelij';
@@ -100,7 +101,7 @@ const Contact = ({ theme }) => {
                 />{' '}
                 <strong>
                   PHONES<br></br>
-                  <span> +2519024635<br></br>+2519876543 </span>{' '}
+                  <span> +251909262626<br></br>+251911019995 </span>{' '}
                 </strong>
               </a>
               <a className="phone">
@@ -111,20 +112,20 @@ const Contact = ({ theme }) => {
                 />{' '}
                 <strong>
                   ADDRESS<br></br>
-                  <span>CHURCHIL SRT 234 ,UI LI<br></br> BUILDING 2ND </span>
+                  <span>Bole,Atlas </span>
                 </strong>
               </a>
             </div>
 
             <div className="social-link">
-              <a href={telegramLink} className="social">
+              <a href="https://t.me/mogesmotor" className="social">
                 <FontAwesomeIcon className="linkt" icon={faTelegram} color="#" />
               </a>
-              <a href={linkdinUserName} className="social">
+              <a href="https://www.facebook.com/mogesmotors/" className="social">
                 <FontAwesomeIcon className="linkf" icon={faFacebook} color="#"/>
               </a>
-              <a href={linkdinUserName} className="social">
-                <FontAwesomeIcon className="linkv" icon={faWhatsapp}color="#"/>
+              <a href="https://www.instagram.com/moges_motors?igsh=Z2FkMThyMHRhYTlv" className="social">
+                <FaInstagram className="linkv" icon={FaInstagram}color="#"/>
               </a>
             </div>
           </section>
