@@ -7,9 +7,8 @@ import { faTelegram, faFacebook } from '@fortawesome/free-brands-svg-icons';
 import {FaInstagram} from "react-icons/fa";
 
 const Contact = ({ theme }) => {
-  const telegramUserName = '@Mikyyetklyelij';
-  const linkdinUserName = 'https://www.linkedin.com/in/mikyas-negash-01b400263';
-  const phoneNumber = '0902464535';
+  const telegramUserName = '@mogesmotor';
+  const phoneNumber = '+251909262626';
 
   const handleDial = () => {
     window.location.href = `tel:${phoneNumber}`;

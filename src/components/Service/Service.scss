@@ -248,16 +248,15 @@
     display: flex;
     justify-content:space-between;
     align-items:center;
-    @media (min-width:710px){
-      justify-content:space-around;
-     }
   }
+
+
   .featured-car-list li{
-   width:50%;   
+   width:100%;   
    @media (min-width:640px){
-    width:40%;   
+    width:50%;   
    }
-   @media (min-width:780px){
+   @media (min-width:1024px){
     width:30%;   
    }
    
@@ -269,7 +268,7 @@
     padding: 10px;
     box-shadow: var(--shadow-1);
     margin: 5px;
-  
+    
   }
   
   .featured-car-card .card-banner {
@@ -280,8 +279,7 @@
   }
   
   .featured-car-card .card-banner > img {
-    height: 100%;
-    object-fit: cover;
+    overflow: hidden;
   }
   
   .featured-car-card .card-content { padding: 20px 10px 10px; }

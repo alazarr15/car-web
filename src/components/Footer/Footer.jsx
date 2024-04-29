@@ -6,7 +6,7 @@ import {
   FaMobileAlt,
   FaTelegram,
 } from "react-icons/fa";
-
+ 
 const FooterLinks = [
   {
     title: "Telegram",
@@ -85,18 +85,25 @@ const Footer = () => {
                 </h1>
                 {/* <ul className="list-disc list-inside"> */}
                 <ul className="flex flex-col gap-3">
-                  {FooterLinks.map((link,index) => (
-                    <li key={index} className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-500 dark:text-gray-200">
-                      <span></span>
-                      <span>{link.title}</span>
+                    <li className="cursor-pointer hover:translate-x-1 duration-300 hover:!text-primary space-x-1 text-gray-500 dark:text-gray-200">
+                      <span>
+                      <iframe
+  src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3786.7075072144294!2d38.77576707483261!3d9.005352991055018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDAnMTkuMyJOIDM4wrA0Nic0Mi4wIkU!5e1!3m2!1sen!2set!4v1712569402691!5m2!1sen!2set"
+  title="Google Map"
+  loading="lazy"
+  referrerPolicy="no-referrer-when-downgrade"
+  className="w-600 h-300 md:max-w-lg lg:max-w-xl xl:max-w-2xl min-w-300"
+  style={{ width: '100%', height: 'auto' }}
+></iframe>
+                      </span>
                     </li>
-                  ))}
                 </ul>
               </div>
             </div>
           </div>
         </div>
       </section>
+      
     </div>
   );
 };

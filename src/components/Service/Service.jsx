@@ -65,7 +65,7 @@ function Service({theme}) {
               <div className="featured-car-card" style={{ color: theme === 'dark' ? 'white' : 'black' }}>
 
                 <figure className="card-banner ">
-                  <img src={item.img} alt="Toyota RAV4 2021" loading="lazy" width="440" height="300"
+                  <img src={item.img} alt="Toyota RAV4 2021" loading="lazy" style={{ maxWidth:'100%', height: '300px',overflow:'hidden'}}
                     className="w-full" />
                 </figure>
 
@@ -144,7 +144,7 @@ export default Service
 const data=[
   {
       img:"images/id6-crozz.png",
-      title:"id.6 Crozz Pro",
+      title:"id.6",
       date:"2023",
       sites:"6",
       range:"600",
@@ -156,7 +156,7 @@ const data=[
      },
      {
       img:"images/eq.png",
-      title:"Q8 e-tron sportback", 
+      title:" Audi Q8", 
       date:"2023",
       sites:"5",
       range:"560",
@@ -168,7 +168,7 @@ const data=[
 
      },
      {
-      img:"images/eq.png",
+      img:"images/neta-u.png",
       title:"neta v",
       date:"2023",
       sites:"5",
@@ -185,7 +185,7 @@ const data=[
       title:"bz4x",
       date:"2023",
       sites:"5",
-      range:"500km",
+      range:"500",
       battery:"66.7kwh",
       designe:"Electric",
       transmission:"Automatic",
@@ -194,11 +194,11 @@ const data=[
      },
 
      {
-      img:"images/toyota-bz4x_1.png",
-      title:"id.4 Crozz Pro",
+      img:"images/id4.png",
+      title:"id 4",
       date:"2023",
       sites:"5",
-      range:"550km",
+      range:"550",
       battery:"84.8kwh",
       designe:"Electric",
       transmission:"Automatic",
@@ -207,11 +207,11 @@ const data=[
 
      },
      {
-      img:"images/toyota-bz4x_1.png",
-      title:"Eqc 400 4matic",
+      img:"images/400.png",
+      title:"Eqc 400 ",
       date:"2022",
       sites:"5",
-      range:"370km",
+      range:"370",
       battery:"85kwh",
       designe:"Electric",
       transmission:"Automatic",
