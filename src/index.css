@@ -1,0 +1,31 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@400;600;700;800&family=DM+Sans:wght@300;400;500;600&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+  font-family: 'DM Sans', sans-serif;
+}
+
+@layer components {
+  .link {
+    @apply cursor-pointer hover:underline;
+  }
+  .button-outline {
+    @apply rounded-md border-2 border-primary hover:bg-primary hover:text-black duration-300 py-2 px-6 text-primary tracking-wider font-semibold;
+  }
+  .btn-primary {
+    @apply bg-primary hover:bg-primary-dark text-black font-semibold py-2.5 px-6 rounded-md transition-all duration-300;
+  }
+  .section-heading {
+    @apply text-4xl md:text-5xl font-bold tracking-tight;
+    font-family: 'Barlow Condensed', sans-serif;
+  }
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: #111; }
+::-webkit-scrollbar-thumb { background: #ffc727; border-radius: 3px; }
