@@ -7,6 +7,7 @@ const stats = [
   { value: "10+", label: "Years in Market" },
   { value: "500+", label: "Happy Clients" },
 ];
+// About Section with enhanced styling and AOS animations
 
 const About = () => {
   return (
