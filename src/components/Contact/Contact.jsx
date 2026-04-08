@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import emailjs from "emailjs-com";
+import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
 import { faTelegram, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
@@ -15,8 +15,8 @@ const Contact = ({ theme }) => {
     e.preventDefault();
     setSending(true);
     emailjs
-      .sendForm("service_uk7hzdl", "template_0fnzi45", form.current, {
-        publicKey: "re8UOJpBf_mKVPA23",
+      .sendForm("service_t0ktif9", "template_9nellsf", form.current, {
+        publicKey: "gYRo0DJytenKU4Jco",
       })
       .then(
         () => {
