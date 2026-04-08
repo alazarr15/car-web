@@ -5,15 +5,16 @@ import { SiAutomattic } from "react-icons/si";
 import { IoPeopleSharp } from "react-icons/io5";
 import { SiMercedes, SiVolkswagen, SiToyota, SiAudi } from "react-icons/si";
 import { TbFilterOff } from "react-icons/tb";
+import { FaCar } from "react-icons/fa";
 import AOS from "aos";
 import carData from "./data";
 
 const filters = [
   { label: "ALL", value: "", icon: <TbFilterOff size={18} /> },
-  { label: "Mercedes", value: "mercedes", icon: <SiMercedes size={18} /> },
+  { label: "BYD", value: "BYD", icon: <FaCar size={18} /> },
   { label: "Volkswagen", value: "volkswagen", icon: <SiVolkswagen size={18} /> },
   { label: "Toyota", value: "toyota", icon: <SiToyota size={18} /> },
-  { label: "Audi", value: "audi", icon: <SiAudi size={18} /> },
+  // { label: "Audi", value: "audi", icon: <SiAudi size={18} /> },
 ];
 
 function Service({ theme }) {
@@ -113,7 +114,7 @@ function Service({ theme }) {
                 <div className="flex items-center justify-between">
                   <div>
                     <div className="text-xs text-gray-400 uppercase tracking-wide">Price</div>
-                    <div className="text-lg font-extrabold text-primary" style={{ fontFamily: "'Barlow Condensed', sans-serif" }}>
+                    <div className="text-lg font-extrabold text-primary" style={{ fontFamily: "'', sans-serif" }}>
                       ETB {car.price}
                     </div>
                   </div>
