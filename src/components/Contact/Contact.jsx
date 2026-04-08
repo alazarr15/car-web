@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 import emailjs from "@emailjs/browser";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPhone, faLocationDot } from "@fortawesome/free-solid-svg-icons";
-import { faTelegram, faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import { faTelegram, faFacebook, faInstagram, faYoutube } from "@fortawesome/free-brands-svg-icons";
 
 const Contact = ({ theme }) => {
   const phoneNumber = "+251909262626";
@@ -171,6 +171,7 @@ const Contact = ({ theme }) => {
                   { icon: faTelegram, href: "https://t.me/mogesmotor", color: "#0088CC" },
                   { icon: faFacebook, href: "https://www.facebook.com/mogesmotors/", color: "#1877F2" },
                   { icon: faInstagram, href: "https://www.instagram.com/moges_motors", color: "#E1306C" },
+                  { icon: faYoutube, href: "https://www.youtube.com/@MogesMotors", color: "#FF0000" }
                 ].map(({ icon, href, color }) => (
                   <a
                     key={href}

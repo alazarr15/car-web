@@ -5,6 +5,7 @@ import {
   FaLocationArrow,
   FaMobileAlt,
   FaTelegram,
+  FaYoutube,
 } from "react-icons/fa";
 
 const quickLinks = [
@@ -18,6 +19,7 @@ const socialLinks = [
   { icon: <FaTelegram />, href: "https://t.me/mogesmotor", label: "Telegram" },
   { icon: <FaFacebook />, href: "https://www.facebook.com/mogesmotors/", label: "Facebook" },
   { icon: <FaInstagram />, href: "https://www.instagram.com/moges_motors", label: "Instagram" },
+  { icon: <FaYoutube />, href: "https://www.youtube.com/@MogesMotors", label: "YouTube" },
 ];
 
 const Footer = () => {
