@@ -96,7 +96,8 @@ const Services = () => {
               Contact our team today and let us help you make the best decision.
             </p>
             <a
-              href="tel:+251909262626"
+              href="https://zayno.io/moges_motors_251610aaa"
+              target="_blank"
               className="inline-block bg-black text-white font-bold py-3 px-8 rounded-full hover:bg-dark-card transition-colors duration-300"
             >
               SPEAK TO AN EXPERT
