@@ -187,7 +187,7 @@ const Contact = ({ theme }) => {
             </div>
 
             {/* Map */}
-            <div className="rounded-xl overflow-hidden border border-gray-100 dark:border-dark-border h-44">
+            <div className="hidden md:block rounded-xl overflow-hidden border border-gray-100 dark:border-dark-border h-44 ">
               <iframe
                 src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3786.7075072144294!2d38.77576707483261!3d9.005352991055018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zOcKwMDAnMTkuMyJOIDM4wrA0Nic0Mi4wIkU!5e1!3m2!1sen!2set!4v1712569402691!5m2!1sen!2set"
                 title="Moges Motors Location"
