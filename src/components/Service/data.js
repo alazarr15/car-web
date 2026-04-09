@@ -62,7 +62,7 @@ const carData = [
     range: "Long Range",
     design: "Hybrid",
     transmission: "Automatic",
-    price: "8.9",
+    price: "8.9 million",
     vehicle: "BYD",
   },
 ];
